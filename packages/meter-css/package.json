@@ -4,6 +4,14 @@
   "description": "A tiny CSS-only library for styling the native HTML meter element.",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maroun-baydoun/meter.css.git"
+  },
+  "homepage": "https://github.com/maroun-baydoun/meter.css#readme",
+  "bugs": {
+    "url": "https://github.com/maroun-baydoun/meter.css/issues"
+  },
   "files": [
     "dist",
     "README.md",
