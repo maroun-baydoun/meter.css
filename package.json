@@ -1,0 +1,18 @@
+{
+  "name": "meter-css-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter meter.css build",
+    "demo": "pnpm --filter meter.css build && pnpm --filter meter.css-demo dev",
+    "test": "pnpm --filter meter.css-test test",
+    "format": "prettier --write './{apps,packages}/**/*.{ts,css,html,json}' './*.{json,md,yaml,yml}'"
+  },
+  "devDependencies": {
+    "prettier": "catalog:"
+  },
+  "engines": {
+    "node": "24",
+    "pnpm": "11"
+  }
+}

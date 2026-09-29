@@ -1,0 +1,35 @@
+{
+  "name": "meter.css",
+  "version": "0.1.0",
+  "description": "A tiny CSS-only library for styling the native HTML meter element.",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./global.css": "./dist/global.css",
+    "./class.css": "./dist/class.css"
+  },
+  "scripts": {
+    "build:global": "vite build --mode global",
+    "build:class": "vite build --mode class",
+    "build:css": "pnpm run build:global && pnpm run build:class",
+    "build": "pnpm run build:css",
+    "prepublishOnly": "pnpm run build",
+    "release:patch": "pnpm version patch",
+    "release:minor": "pnpm version minor",
+    "release:major": "pnpm version major",
+    "release:beta": "pnpm version prerelease --preid beta",
+    "release:beta-major": "pnpm version premajor --preid beta",
+    "release:beta-minor": "pnpm version preminor --preid beta",
+    "release:beta-patch": "pnpm version prepatch --preid beta"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}

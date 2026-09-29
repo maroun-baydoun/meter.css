@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">meter.css — Style the native meter element</title>
+  <desc id="description">A tiny CSS-only library for styling the native HTML meter element.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020617" />
+      <stop offset="1" stop-color="#020617" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)" />
+  <circle cx="980" cy="115" r="260" fill="#22d3ee" opacity=".1" />
+  <g id="project-specific-graphic" transform="translate(760 150)">
+    <rect width="360" height="250" rx="30" fill="#07111f" stroke="#475569" stroke-width="3" />
+    <rect x="38" y="82" width="284" height="32" rx="16" fill="#334155" />
+    <rect x="38" y="82" width="232" height="32" rx="16" fill="#86efac" />
+    <rect x="38" y="142" width="284" height="32" rx="16" fill="#334155" />
+    <rect x="38" y="142" width="155" height="32" rx="16" fill="#fcd34d" />
+    <rect x="38" y="202" width="284" height="32" rx="16" fill="#334155" />
+    <rect x="38" y="202" width="74" height="32" rx="16" fill="#fda4af" />
+  </g>
+  <g font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif">
+    <text x="80" y="285" fill="#f8fafc" font-size="92" font-weight="650" letter-spacing="-3">meter.css</text>
+    <text x="86" y="355" fill="#67e8f9" font-size="32" font-weight="600">Style the native meter element.</text>
+  </g>
+</svg>

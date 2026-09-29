@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: oklch(0.77 0.12 214);
+  --color-accent-foreground: oklch(0.16 0.03 245);
+  --color-foreground: oklch(0.98 0.01 245);
+  --color-surface: oklch(0.16 0.03 245);
+  --color-surface-elevated: oklch(0.2 0.03 245);
+  --color-muted: oklch(0.78 0.02 245);
+  --color-border: oklch(1 0 0 / 0.13);
+  --color-snippet-keyword: #67e8f9;
+  --color-snippet-string: #a7f3d0;
+  --color-snippet-identifier: #e2e8f0;
+  --color-snippet-operator: #94a3b8;
+  --color-snippet-punctuation: #94a3b8;
+  --color-snippet-comment: #94a3b8;
+}
+
+@theme inline {
+  --color-foreground-strong: var(--color-white);
+  --color-snippet-foreground: var(--color-slate-200);
+}
+
+:root {
+  color-scheme: dark;
+  font-family:
+    "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    background:
+      radial-gradient(circle at top, rgb(34 211 238 / 0.18), transparent 38%),
+      linear-gradient(180deg, #020617 0%, #020617 100%);
+  }
+
+  body {
+    @apply min-h-screen bg-surface text-foreground antialiased;
+    margin: 0;
+    min-width: 320px;
+  }
+
+  .page-shell {
+    @apply mx-auto flex min-h-screen w-full max-w-6xl flex-col;
+    @apply px-4 py-4 sm:px-6 sm:py-6 lg:px-10 xl:max-w-7xl;
+  }
+
+  header {
+    @apply flex flex-col gap-3 border-b border-border/80 pb-4;
+    @apply sm:flex-row sm:items-center sm:justify-between sm:pb-5;
+  }
+
+  header nav,
+  footer nav {
+    @apply flex flex-wrap items-center gap-4;
+  }
+
+  header a,
+  footer a {
+    @apply text-muted transition-colors hover:text-foreground-strong;
+  }
+
+  header img {
+    display: block;
+  }
+
+  h1 {
+    @apply text-lg font-semibold uppercase tracking-[0.2em] text-foreground;
+  }
+
+  h3,
+  h4 {
+    @apply text-sm font-medium uppercase tracking-[0.25em] text-muted;
+  }
+
+  code {
+    font-family:
+      "SFMono-Regular", ui-monospace, "Cascadia Mono", "Segoe UI Mono",
+      monospace;
+  }
+
+  pre {
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    @apply flex flex-1 flex-col items-start gap-12 py-10;
+    @apply sm:gap-14 sm:py-14 lg:py-20;
+  }
+
+  footer {
+    @apply flex flex-col gap-3 border-t border-border/80 pt-5 text-sm text-muted;
+    @apply sm:flex-row sm:items-center sm:justify-between sm:pt-6;
+  }
+}
+
+@layer components {
+  .hero {
+    @apply grid w-full gap-10;
+    @apply lg:grid-cols-[minmax(0,1.1fr)_minmax(22rem,0.9fr)] lg:items-center;
+  }
+
+  .hero-content {
+    @apply max-w-3xl;
+  }
+
+  .eyebrow {
+    @apply mb-4 text-xs font-medium uppercase tracking-[0.3em] text-accent;
+  }
+
+  .hero-title {
+    @apply text-4xl font-semibold tracking-tight text-foreground sm:text-6xl;
+  }
+
+  .hero-intro {
+    @apply mt-5 max-w-2xl text-base leading-7 text-muted sm:mt-6 sm:text-lg;
+  }
+
+  .page-section {
+    @apply flex w-full flex-col gap-6 border-t border-border/80 py-10 sm:py-12;
+  }
+
+  .section-header {
+    @apply max-w-3xl;
+  }
+
+  .section-header-intro {
+    @apply mt-3 text-base leading-7 text-muted sm:mt-4 sm:text-lg;
+  }
+
+  .section-header-intro code {
+    @apply text-accent;
+  }
+
+  .meter-grid,
+  .api-grid {
+    @apply grid w-full gap-4 md:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .meter-card,
+  .api-card {
+    @apply rounded-2xl border border-border/80 bg-surface-elevated/80 p-5;
+  }
+
+  .meter-card {
+    @apply min-w-0;
+  }
+
+  .meter-card-header {
+    @apply flex items-start justify-between gap-4;
+  }
+
+  .meter-card-header span {
+    @apply shrink-0 font-mono text-sm text-muted;
+  }
+
+  .meter-card p,
+  .api-card p {
+    @apply mt-4 text-sm leading-6 text-muted;
+  }
+
+  .demo-meter {
+    @apply mt-8 block w-full;
+    --meter-css-track: #334155;
+    --meter-css-optimum: #86efac;
+    --meter-css-suboptimum: #fcd34d;
+    --meter-css-sub-suboptimum: #fda4af;
+  }
+
+  .api-grid {
+    @apply xl:grid-cols-4;
+  }
+
+  .api-card code {
+    @apply break-all text-sm text-accent;
+  }
+}

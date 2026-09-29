@@ -1,0 +1,40 @@
+/*
+ * The selector is replaced by vite.config.ts for each distribution entry:
+ *   global -> meter
+ *   class  -> .meter
+ *
+ * Keep the source shared so browser-specific fixes are made once.
+ */
+:where(__METER_SELECTOR__) {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--meter-css-track, transparent);
+}
+
+:where(__METER_SELECTOR__)::-webkit-meter-bar {
+  background: var(--meter-css-track, transparent);
+}
+
+:where(__METER_SELECTOR__)::-webkit-meter-optimum-value {
+  background: var(--meter-css-optimum, revert);
+}
+
+:where(__METER_SELECTOR__)::-webkit-meter-suboptimum-value {
+  background: var(--meter-css-suboptimum, revert);
+}
+
+:where(__METER_SELECTOR__)::-webkit-meter-even-less-good-value {
+  background: var(--meter-css-sub-suboptimum, revert);
+}
+
+:where(__METER_SELECTOR__):-moz-meter-optimum::-moz-meter-bar {
+  background: var(--meter-css-optimum, revert);
+}
+
+:where(__METER_SELECTOR__):-moz-meter-sub-optimum::-moz-meter-bar {
+  background: var(--meter-css-suboptimum, revert);
+}
+
+:where(__METER_SELECTOR__):-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: var(--meter-css-sub-suboptimum, revert);
+}

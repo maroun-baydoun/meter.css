@@ -1,0 +1,18 @@
+packages:
+  - apps/*
+  - packages/*
+
+allowBuilds:
+  "@tailwindcss/oxide": true
+  esbuild: true
+  sharp: true
+
+catalog:
+  "@tailwindcss/vite": 4.3.3
+  "@types/node": 24.3.0
+  "prettier": 3.9.9
+  "sharp": 0.35.5
+  "tailwindcss": 4.3.3
+  "typescript": 7.0.2
+  "vite": 8.3.1
+  "vitest": 5.0.2

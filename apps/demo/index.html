@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Style the native HTML meter element with a tiny CSS-only library."
+    />
+    <link rel="canonical" href="https://dev.maroun-baydoun.com/meter.css/" />
+    <meta
+      property="og:title"
+      content="meter.css | Style the native meter element"
+    />
+    <meta
+      property="og:description"
+      content="Style the native HTML meter element with a tiny CSS-only library."
+    />
+    <meta
+      property="og:image"
+      content="https://dev.maroun-baydoun.com/meter.css/og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://dev.maroun-baydoun.com/meter.css/og.jpg"
+    />
+    <script
+      defer
+      src="https://api.pirsch.io/pa.js"
+      id="pianjs"
+      data-code="x4SrON7R1E4J8zwe6fnZrvHMt01zgGN6"
+    ></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "meter.css",
+        "description": "Style the native HTML meter element with a tiny CSS-only library.",
+        "programmingLanguage": "CSS",
+        "runtimePlatform": "Web",
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/license/mit/",
+        "codeRepository": "https://github.com/maroun-baydoun/meter-css",
+        "url": "https://github.com/maroun-baydoun/meter-css"
+      }
+    </script>
+    <title>meter.css | Style the native meter element</title>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header>
+        <h1>meter.css</h1>
+        <nav aria-label="Project links">
+          <a href="https://github.com/maroun-baydoun/meter-css">★ Github</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-content">
+            <p class="eyebrow">Native HTML, styled consistently</p>
+            <h2 class="hero-title">Style the native meter element.</h2>
+            <p class="hero-intro">
+              Import the stylesheet, then keep writing ordinary HTML while the
+              browser stays in charge of meter semantics, values, and native
+              states.
+            </p>
+          </div>
+
+          <snippet-card title="Usage">
+            <div data-snippet-header>
+              <span data-snippet-title></span>
+              <span data-snippet-language></span>
+            </div>
+            <pre><code data-code="usage" data-language="tsx"></code></pre>
+            <snippet-copy-button>Copy</snippet-copy-button>
+          </snippet-card>
+        </section>
+
+        <section
+          class="page-section"
+          data-project-specific
+          aria-labelledby="examples-heading"
+        >
+          <div class="section-header">
+            <h3 id="examples-heading">Native states</h3>
+            <p class="section-header-intro">
+              Change <code>value</code>, <code>low</code>, <code>high</code>,
+              and <code>optimum</code>. The browser decides which state each
+              meter is in.
+            </p>
+          </div>
+
+          <div class="meter-grid">
+            <article class="meter-card">
+              <div class="meter-card-header">
+                <h4>Optimum</h4>
+                <span>85 / 100</span>
+              </div>
+              <meter
+                class="demo-meter"
+                min="0"
+                max="100"
+                low="30"
+                high="70"
+                optimum="100"
+                value="85"
+              >
+                85%
+              </meter>
+              <p>Good when higher values are better.</p>
+            </article>
+
+            <article class="meter-card">
+              <div class="meter-card-header">
+                <h4>Sub-optimum</h4>
+                <span>55 / 100</span>
+              </div>
+              <meter
+                class="demo-meter"
+                min="0"
+                max="100"
+                low="30"
+                high="70"
+                optimum="100"
+                value="55"
+              >
+                55%
+              </meter>
+              <p>Between the low and high thresholds.</p>
+            </article>
+
+            <article class="meter-card">
+              <div class="meter-card-header">
+                <h4>Sub-sub-optimum</h4>
+                <span>20 / 100</span>
+              </div>
+              <meter
+                class="demo-meter"
+                min="0"
+                max="100"
+                low="30"
+                high="70"
+                optimum="100"
+                value="20"
+              >
+                20%
+              </meter>
+              <p>Below the low threshold.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="page-section" aria-labelledby="install-heading">
+          <div class="section-header">
+            <h3 id="install-heading">Install</h3>
+            <p class="section-header-intro">
+              Import the global stylesheet or opt into the class-scoped build.
+            </p>
+          </div>
+
+          <chip-tabs data-default-tab="npm" id="install-tabs">
+            <div data-tablist aria-label="Package manager">
+              <button type="button" data-tab="npm">npm</button>
+              <button type="button" data-tab="pnpm">pnpm</button>
+              <button type="button" data-tab="yarn">yarn</button>
+            </div>
+
+            <div data-tab-panels>
+              <snippet-card
+                data-tab-panel="npm"
+                title="npm"
+                language-label="shell"
+              >
+                <pre><code data-code="install-npm" data-language="shell"></code></pre>
+                <snippet-copy-button>Copy</snippet-copy-button>
+              </snippet-card>
+              <snippet-card
+                data-tab-panel="pnpm"
+                title="pnpm"
+                language-label="shell"
+              >
+                <pre><code data-code="install-pnpm" data-language="shell"></code></pre>
+                <snippet-copy-button>Copy</snippet-copy-button>
+              </snippet-card>
+              <snippet-card
+                data-tab-panel="yarn"
+                title="yarn"
+                language-label="shell"
+              >
+                <pre><code data-code="install-yarn" data-language="shell"></code></pre>
+                <snippet-copy-button>Copy</snippet-copy-button>
+              </snippet-card>
+            </div>
+          </chip-tabs>
+        </section>
+
+        <section
+          class="page-section"
+          data-project-specific
+          aria-labelledby="api-heading"
+        >
+          <div class="section-header">
+            <h3 id="api-heading">API</h3>
+            <p class="section-header-intro">
+              A deliberately small CSS custom-property API. No JavaScript state
+              API is required.
+            </p>
+          </div>
+
+          <div class="api-grid">
+            <article class="api-card">
+              <code>--meter-css-track</code>
+              <p>Track background color.</p>
+            </article>
+            <article class="api-card">
+              <code>--meter-css-optimum</code>
+              <p>Color for the native optimum state.</p>
+            </article>
+            <article class="api-card">
+              <code>--meter-css-suboptimum</code>
+              <p>Color for the native sub-optimum state.</p>
+            </article>
+            <article class="api-card">
+              <code>--meter-css-sub-suboptimum</code>
+              <p>Color for the native least-good state.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <nav>
+          <a href="https://dev.maroun-baydoun.com/">See other projects</a>
+          <a href="https://github.com/maroun-baydoun/meter-css">github</a>
+        </nav>
+        <span>© <copyright-year>2026</copyright-year> Maroun Baydoun</span>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

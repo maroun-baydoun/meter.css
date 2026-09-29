@@ -1,0 +1,21 @@
+{
+  "name": "meter.css-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "og": "node scripts/generate-og.js"
+  },
+  "dependencies": {
+    "meter.css": "workspace:*"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "catalog:",
+    "@types/node": "catalog:",
+    "sharp": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}
