@@ -17,6 +17,8 @@ The package contains CSS only. It has no JavaScript runtime or custom elements.
 
 The styles opt out of the WebKit native visual skin so the browser-specific meter pseudo-elements can be styled consistently. The native element, value semantics, and accessibility behavior remain intact.
 
+WebKit and Blink expose a separate track pseudo-element. Firefox exposes only the filled bar, so the track property is applied to the native `<meter>` element there to keep the track visible.
+
 The library does not assign theme values to its custom properties. Set the properties in your own stylesheet:
 
 ```css

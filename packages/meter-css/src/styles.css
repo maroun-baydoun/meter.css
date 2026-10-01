@@ -8,7 +8,13 @@
 :where(__METER_SELECTOR__) {
   appearance: none;
   -webkit-appearance: none;
-  background: var(--meter-css-track, transparent);
+}
+
+/* Firefox has no separate pseudo-element for the meter track. */
+@supports selector(:-moz-meter-optimum::-moz-meter-bar) {
+  :where(__METER_SELECTOR__) {
+    background: var(--meter-css-track, transparent);
+  }
 }
 
 :where(__METER_SELECTOR__)::-webkit-meter-bar {
